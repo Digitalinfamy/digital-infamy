@@ -25,7 +25,7 @@ async function sendEmail(req: any, res: any) {
         name: "Website Contact"
       }, // your website email address here
       subject: `${req.body.subject}-${req.body.fullname}`,
-      html: `${req.body.message}`
+      html: `${req.body.message}\r\n${req.body.email}`
     });
   } catch (error: any) {
     console.log(error);
