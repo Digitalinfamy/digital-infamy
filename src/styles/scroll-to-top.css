@@ -8,12 +8,13 @@
     z-index: 20;
 }
 .icon-style{
-    background-color: rgb(46, 177, 161);
-    border: 2px solid #fff;
+    /*background-color: rgb(46, 177, 161);*/
+    background: rgb(0, 212, 255) linear-gradient(-90deg, rgba(0, 212, 255, 1) 0%, rgba(0, 255, 221, 1) 100%);
+    border: 2px solid rgb(0, 212, 255);
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    color: #fff;
+    color: #1C1D28;
     cursor: pointer;
     animation: movebtn 3s ease-in-out infinite;
     transition: all .5s ease-in-out;

@@ -17,7 +17,7 @@ const getMobileDetect = (userAgent: NavigatorID['userAgent']) => {
   }
 }
 const useMobileDetect = () => {
-  const [nav, setNav] = useState<any | null>(undefined)
+  const [nav, setNav] = useState<Navigator | undefined>(undefined)
   useEffect(() => {
     if (navigator) {
       setNav(navigator);
