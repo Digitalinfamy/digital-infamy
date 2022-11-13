@@ -1,4 +1,7 @@
+import { ResponseError } from "@sendgrid/helpers/classes";
 import sendgrid from "@sendgrid/mail";
+import { NextApiRequest, NextApiResponse } from "next";
+import { NextError } from "next/dist/lib/is-error";
 import z from "zod";
 import { env } from "../../env/server.mjs";
 
@@ -13,7 +16,7 @@ const schema = z.object({
   message: z.string().min(1, { message: "Please enter a message." })
 });
 
-async function sendEmail(req: any, res: any) {
+async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
   try {
     console.log("REQ.BODY", req.body);
     schema.parse(req.body);
@@ -27,9 +30,11 @@ async function sendEmail(req: any, res: any) {
       subject: `${req.body.subject}-${req.body.fullname}`,
       html: `${req.body.message}\r\n${req.body.email}`
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.log(error);
-    return res.status(error.statusCode || 500).json({ error: error.message });
+    if (error instanceof ResponseError) {
+      return res.status(error.code || 500).json({ error: error.message });
+    }
   }
 
   return res.status(200).json({ error: "" });

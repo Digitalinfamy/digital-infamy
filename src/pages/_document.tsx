@@ -1,6 +1,8 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import { GA_TRACKING_ID } from "../components/ga-tag";
 
 export default function Document() {
+  const isProduction = true;
   return (
     <Html>
       <Head>
@@ -21,6 +23,28 @@ export default function Document() {
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           rel="stylesheet"
         />
+        {/* enable analytics script only for production */}
+        {isProduction && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+            />
+            <script
+              // eslint-disable-next-line react/no-danger
+              dangerouslySetInnerHTML={{
+                __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+              }}
+            />
+          </>
+        )}
       </Head>
       <body>
       <Main />

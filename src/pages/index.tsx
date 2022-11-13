@@ -37,14 +37,14 @@ export function NavBar() {
     scrollSpy.update();
   }, []);
   return ( <ul className="navbar-nav">
-    <li><Link activeClass="active" href="#home" to="home" spy={true} smooth={true} duration={1500}
+    <li className="invisible sm:visible"><Link activeClass="active" href="#home" to="home" spy={true} smooth={true} duration={1500}
               offset={getOffset()}>Home</Link></li>
     <li><Link activeClass="active" href="#about" to="about" spy={true} smooth={true} duration={1500}
               offset={getOffset()}>About</Link></li>
     <li><Link activeClass="active" href="#specialities" to="specialities" spy={true} smooth={true} duration={1500}
-              offset={getOffset()}>Services</Link></li>
+              offset={getOffset()}>Specialities</Link></li>
     <li><Link activeClass="active" href="#contact" to="contact" spy={true} smooth={true} duration={1500}
-              offset={getOffset()}>Contact Us</Link></li>
+              offset={getOffset()}>Contact</Link></li>
   </ul> );
 }
 
@@ -123,7 +123,8 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Home - Digital~Infamy</title>
+        <title>Home - Digital Infamy</title>
+
         <meta name="description" content="Digital Infamy, solving problems using web based solutions" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -190,13 +191,13 @@ const Home: NextPage = () => {
             <div
               className="p-6 bg-white rounded-lg">
               <a href="#">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Developer for
-                  Hire</h5>
+                <h2 className="mb-2 text-4xl font-bold tracking-tight text-white">Developer for
+                  Hire</h2>
               </a>
-              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              <p className="mb-3 font-normal text-gray-200">
                 Need some additional resource but don&apos;t want to be tied down to 6-12 month contracts. I currently
                 have the capacity to provide ad-hoc working hours to back fill on struggling projects</p>
-              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              <p className="mb-3 font-normal text-gray-200">
                 With a vast range of skills and an ability to fit in quickly with existing teams. I can often get up to
                 speed and seamlessly and make it feel like I&apos;ve always been part of the team.
               </p>
@@ -204,10 +205,10 @@ const Home: NextPage = () => {
             <div
               className="p-6 bg-white rounded-lg">
               <a href="#">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Mentoring
-                  Services</h5>
+                <h2 className="mb-2 text-4xl font-bold tracking-tight text-white">Mentoring
+                  Services</h2>
               </a>
-              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">I have an abundance of patients and have
+              <p className="mb-3 font-normal text-gray-200">I have an abundance of patients and have
                 guided many developers on their careers. I can come in and help mentor junior developers and also more
                 senior developers who need a hand picking up some of the modern tech-stack. This can be done in a very
                 focus topic based way or via a work-based project to gain optimum value for money.</p>
@@ -215,10 +216,10 @@ const Home: NextPage = () => {
             <div
               className="p-6 bg-white rounded-lg">
               <a href="#">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Consultancy &
-                  Advice</h5>
+                <h2 className="mb-2 text-4xl font-bold tracking-tight text-white">Consultancy &
+                  Advice</h2>
               </a>
-              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              <p className="mb-3 font-normal text-gray-200">
                 With over a decades experience of working with companies from Start-Ups to SME&apos;s and even a few
                 medium sized corporations. I can offer advice and consultancy services on all aspects of development
                 including Digital Transformations, Requirements Gathering, Process Mapping and Creation. Task
