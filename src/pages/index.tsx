@@ -123,9 +123,16 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Home - Digital Infamy</title>
+        <title>Digital Infamy - Web Developer, Developer Mentoring and upskilling, Contracting, Freelance project</title>
 
-        <meta name="description" content="Digital Infamy, solving problems using web based solutions" />
+        <meta name="description" content="Digital Infamy is a consultancy that helps clients solve problems using web based solutions. We Offer developer resources and developer mentoring" />
+        <meta name="keywords" content="Digit Infamy, Developer, Software, Web design, Developer Mentoring, Junior developer training, Software Advice, Platform Integrations" />
+
+        <meta property="og:url" content="https://digitalinfamy.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://digitalinfamy.com/Digital_Infamy_LOGO.png" />
+        <meta property="og:description" content="Simple and cost effective software developer resources, Builds, Consultancy, Developer training and UpSkilling" />
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <nav className="sticky" style={{ zIndex: 1000 }}>
