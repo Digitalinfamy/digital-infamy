@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import { GrGithub, GrInstagram, GrLinkedin, GrTwitter } from "react-icons/gr";
+import { FaDev } from "react-icons/fa";
+import { GrGithub, GrInstagram, GrLinkedin, GrMedium, GrTwitter } from "react-icons/gr";
 import ScrollToTop from "../scroll-to-top/ScrollToTop";
 
 function Footer() {
@@ -35,6 +36,16 @@ function Footer() {
           <div>
             <a href="https://github.com/Digitalinfamy" rel="noreferrer noopener" target="_blank">
               <GrGithub />
+            </a>
+          </div>
+          <div>
+            <a href="https://andrewallison.medium.com/" rel="noreferrer noopener" target="_blank">
+              <GrMedium />
+            </a>
+          </div>
+          <div>
+            <a href="https://dev.to/andrewallison" rel="noreferrer noopener" target="_blank">
+              <FaDev />
             </a>
           </div>
         </div>
